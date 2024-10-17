@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: "sans-serif", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, "MSPゴシック", "MS PGothic", sans-serif;
+    color:#3c3c3c;
+    background-color:rgb(118, 197, 199);
+    .content h1 {
+      font-size: 20px;
+      padding: 0.5em 0;/* 上下の余白 */
+      border-top: dotted 3px;/* 上線 */
+      border-bottom: solid 3px;/* 下線 */
+    }
+
+    #slider {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #java {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+
+  }
+    
+  
+  footer {
+    width: 100%; /* 幅いっぱいを指定 */
+    height: 100px; /* 高さを指定 */
+    background: rgb(255, 255, 255); /* 背景色を指定 */
+    text-align: end;
+  }
+  
+  .footer_logo {
+    line-height: 50px;
+  }

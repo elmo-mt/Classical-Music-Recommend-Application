@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <title>気分レコメンド</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../static/css/style2.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    
+    <style>
+        .slider-container {
+            display: flex;
+            justify-content: center; /* 横方向の中央寄せ */
+            align-items: center; /* 縦方向の中央寄せ */
+            margin: 20px 0; /* スライダー周りに余白を設定（必要に応じて調整） */
+        }
+
+        #slider {
+            width: 600px; /* スライダーの幅を設定 */
+        }
+
+        .sample_image {
+            width: 100%; /* 画像がスライダー内にフィットするように設定 */
+            height: auto;
+        }
+    </style>
+
+    <div id="java">
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('#slider').bxSlider({
+                    auto: true,
+                    pause: 5000, // 画像がスライドするスピード
+                    slideWidth: 400, // 画像の横幅
+                });
+            });
+        </script>
+    </div> 
+</head>
+
+<body>
+    <a href="/">TOPへ戻る</a>
+    <h1>どんな気分？</h1>
+
+    <div class="kibunform">
+        <form action="/kibun2" method="POST">
+            <label><input type="checkbox" name="fav" value="堂々と">目を覚ましたい</label>
+            <label><input type="checkbox" name="fav" value="楽しい">楽しい</label>
+            <label><input type="checkbox" name="fav" value="静かな">集中したい</label>
+            <label><input type="checkbox" name="fav" value="甘い">甘い曲を</label>
+            <label><input type="checkbox" name="fav" value="舞曲">踊りたい</label>
+            <label><input type="checkbox" name="fav" value="悲しい">悲しい</label>
+            <label><input type="checkbox" name="fav" value="映画">有名な曲を</label>
+            <label><input type="checkbox" name="fav" value="明快な">盛り上がりたい</label>
+            <input type="submit" value="今の気分を送信!">
+        </form>
+    </div>
+    
+    <h2>作曲家で選ぶ</h2>
+
+    <div class = "artistform">
+        <form action="/kibun2" method="POST">
+            <label><input type="checkbox" name="fav" value="バッハ">バッハ</label>
+            <label><input type="checkbox" name="fav" value="モーツァルト">モーツァルト</label>
+            <label><input type="checkbox" name="fav" value="ベートーヴェン">ベートーヴェン</label>
+            <label><input type="checkbox" name="fav" value="シューベルト">シューベルト</label>
+            <label><input type="checkbox" name="fav" value="ショパン">ショパン</label>
+            <label><input type="checkbox" name="fav" value="シューマン">シューマン</label>
+            <label><input type="checkbox" name="fav" value="ブラームス">ブラームス</label>
+            <label><input type="checkbox" name="fav" value="チャイコフスキー">チャイコフスキー</label>
+            <label><input type="checkbox" name="fav" value="ドヴォルザーク">ドヴォルザーク</label>
+            <label><input type="checkbox" name="fav" value="マーラー">マーラー</label>
+            <label><input type="checkbox" name="fav" value="シベリウス">シベリウス</label>
+            <label><input type="checkbox" name="fav" value="ラフマニノフ">ラフマニノフ</label>
+            <label><input type="checkbox" name="fav" value="ドビュッシー">ドビュッシー</label>
+            <label><input type="checkbox" name="fav" value="ラヴェル">ラヴェル</label>
+            <input type="submit" value="作曲家を送信!">
+        </form>
+    </div>
+
+    <!-- スライダーを囲むコンテナ要素を追加 -->
+    <div class="slider-container">
+        <div id="slider">
+            <img src="../static/images/musician/bach.png" alt="バッハ" class="sample_image"/>
+            <img src="../static/images/musician/beethoven.png" alt="ベートーヴェン" class="sample_image"/>
+            <img src="../static/images/musician/mozart.jpg" alt="モーツァルト" class="sample_image"/>
+            <img src="../static/images/musician/schubelt.png" alt="シューベルト" class="sample_image"/>
+            <img src="../static/images/sister.jpg" alt="姉妹" class="sample_image"/>
+            <img src="../static/images/musician/schumann.png" alt="シューマン" class="sample_image"/>
+            <img src="../static/images/musician/chopin.png" alt="ショパン" class="sample_image"/>
+            <img src="../static/images/musician/brahmus.png" alt="ブラームス" class="sample_image"/>
+            <img src="../static/images/piano.jpg" alt="ピアノ" class="sample_image"/>
+            <img src="../static/images/musician/dvorak.png" alt="ドヴォルザーク" class="sample_image"/>
+            <img src="../static/images/musician/tchaikovsky.png" alt="チャイコフスキー" class="sample_image"/>
+            <img src="../static/images/musician/mahler.png" alt="マーラー" class="sample_image"/>
+            <img src="../static/images/boy.jpg" alt="少年" class="sample_image"/>
+            <img src="../static/images/musician/sibelius.png" alt="シベリウス" class="sample_image"/>
+            <img src="../static/images/musician/pah.png" alt="ラフマニノフ" class="sample_image"/>
+            <img src="../static/images/musician/debussy.png" alt="ドビュッシー" class="sample_image"/>
+            <img src="../static/images/musician/ravel.png" alt="ラヴェル" class="sample_image"/>
+        </div>
+    </div>
+</body>
+
+</html>

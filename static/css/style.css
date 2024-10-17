@@ -1,0 +1,180 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: "sans-serif", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, "MSPゴシック", "MS PGothic", sans-serif;
+    color:#000000;
+    background-color:rgb(118, 197, 199);
+    .content h1 {
+      font-size: 20px;
+      padding: 0.5em 0;/* 上下の余白 */
+      border-top: dotted 3px;/* 上線 */
+      border-bottom: solid 3px;/* 下線 */
+    }
+
+  }
+  
+  /* *********************************
+  headerの設定
+  *********************************** */
+  header {
+    height: 65px;
+    width: 100%;
+    padding: 0px 0px;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    display: flex;
+  }
+  
+  
+  
+  header nav {
+    margin: 0 0 0 auto;
+  }
+  
+  header ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+ 
+  
+  header h1 {
+    font-size: 45px;
+    color: #3c3c3c;
+    font-weight:bold;
+  }
+  
+  
+  /* *********************************　
+  mainの設定
+  *********************************** */
+  main {
+    padding-top: 120px;
+    text-align: center;
+    width: 100%;
+    min-height: calc(100vh - 50px);
+    top: 0;
+    bottom: 0;
+
+  }
+  main h2 {
+    font-size: 35px;
+    color: #3c3c3c;
+    font-weight:100;
+  }
+
+ 
+  
+
+
+  .content {
+      box-sizing: border-box;
+      height: 40px;
+      width:100%;
+      background-color:#fff;
+      padding: 0em;
+      margin: 13px auto;
+      border: 3px solid rgb(255, 255, 255);
+      border-radius: 1px;
+      font-size: 45px;
+      color: #000000;
+      font-weight:bold;
+      text-align: center;
+      
+  }
+  
+  /* content要素内のh1要素に対する設定 */
+  
+  #slider {
+       width: auto; /* 幅を200pxに指定 */
+       height: 1500px; /* 高さを150pxに指定 */
+       object-fit: cover; /* 画像を枠に収める */
+  }
+  
+  
+  th {
+    width: 30%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(115, 210, 230);
+  }
+  
+  td{
+    width: 70%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(213, 246, 253);
+    border: 2px solid rgba(115, 210, 230);
+  }
+  
+  .input_field [type="number"]{
+    border: none;
+    outline: none;
+  }
+  
+  /* 「click」ボタンのスタイル */
+  #click_btn a {
+    text-align: center;
+    margin: 10px auto;
+    padding: 1px;
+    width: 150px;
+    font-size: 18px;
+    color: #000;
+    background-color: rgb(246, 123, 123);
+    border-radius: 50vh;
+  }
+  
+  #click_btn a:hover {
+    background-color: rgb(250, 90, 90);
+  }
+  
+  /* 「計算する」ボタンのスタイル */
+  #recommend [type="submit"]{
+      cursor:pointer;
+    text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+      width: 100px;
+      padding: 4px 10px;
+      margin-top: 10px;
+      color:#fff;
+    background: rgb(246, 123, 123);
+    border: none;
+      border-radius: 5px;
+  }
+  
+  .image-container {
+    display: flex;
+    justify-content: space-between; /* 画像間のスペースを調整 */
+    align-items: center;
+    width: 100%; /* 親要素の幅いっぱいに設定 */
+  }
+  .image-container img {
+    object-fit: cover;
+    height: 300px;
+    width: 300px;
+  }
+  /* *********************************　
+  footerの設定
+  *********************************** */
+  footer {
+    width: 100%; /* 幅いっぱいを指定 */
+    height: 100px; /* 高さを指定 */
+    background: rgb(255, 255, 255); /* 背景色を指定 */
+    text-align: end;
+  }
+  
+  .footer_logo {
+    line-height: 50px;
+  }
